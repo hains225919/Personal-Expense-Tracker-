@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node backend/server.js",
     "server": "npm --prefix backend start",
-    "client": "npm --prefix frontend dev",
+    "client": "npm --prefix frontend run dev",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "seed": "node seed-data.js",
     "capture-screenshots": "node capture-screenshots.js",
