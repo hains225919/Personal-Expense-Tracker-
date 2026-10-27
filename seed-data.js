@@ -2,9 +2,15 @@
  * Seed Database with Sample Expenses for Testing & Verification
  * Run using: npm run seed
  */
-const mongoose = require('mongoose');
 const path = require('path');
-const dotenv = require('dotenv');
+let mongoose, dotenv;
+try {
+  mongoose = require('mongoose');
+  dotenv = require('dotenv');
+} catch (e) {
+  mongoose = require('./backend/node_modules/mongoose');
+  dotenv = require('./backend/node_modules/dotenv');
+}
 
 // Load environment variables
 dotenv.config({ path: path.join(__dirname, '.env') });
